@@ -8,6 +8,7 @@
     })(window,document,'script','dataLayer','GTM-N8Z8Z9M6');</script>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Punainen Elefantti AR - Kävely</title>
     
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -19,18 +20,26 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8Z8Z9M6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="logarithmicDepthBuffer: true;">
+    <div id="camera-error" style="position: absolute; top: 50%; width: 100%; text-align: center; display: none; z-index: 100;">
+        <p>Kameraa ei voitu avata. Varmista, että annoit selaimelle luvat.</p>
+    </div>
+
+    <a-scene 
+        embedded 
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+        renderer="logarithmicDepthBuffer: true;"
+        vr-mode-ui="enabled: false">
         
         <a-assets>
             <a-asset-item id="elephant-model" src="https://raw.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/Elephant/glTF-Binary/Elephant.glb"></a-asset-item>
         </a-assets>
 
         <a-entity 
-            id="elefantti"
+            id="elefantti-hahmo"
             gltf-model="#elephant-model"
-            position="0 -1 -5"
-            scale="0.5 0.5 0.5"
-            animation-mixer="clip: walk; loop: repeat"
+            position="0 -1.5 -7"
+            scale="0.8 0.8 0.8"
+            animation-mixer
             look-at="[camera]">
         </a-entity>
 
@@ -38,7 +47,12 @@
     </a-scene>
 
     <script>
-        console.log("3D-ulkoilutus käynnissä. Elefantti kävelee ja seuraa kameraa.");
+        // Tarkistetaan, saatiinko kamera auki
+        window.addEventListener('camera-error', () => {
+            document.getElementById('camera-error').style.display = 'block';
+        });
+        
+        console.log("AR-ulkoilutus aloitettu.");
     </script>
 </body>
 </html>
