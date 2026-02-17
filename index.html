@@ -8,84 +8,39 @@
     })(window,document,'script','dataLayer','GTM-N8Z8Z9M6');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punainen Elefantti - Hyvää päivää</title>
+    <title>Hyvää päivää</title>
     
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
+            font-family: 'Georgia', serif; /* Hieman pehmeämpi ja arvokkaampi fontti */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(to bottom, #e0f2f1, #ffffff);
+            background-color: #ffffff; /* Puhdas valkoinen */
             color: #333;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #d32f2f;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em;
+            font-weight: normal;
+            letter-spacing: 2px;
+            animation: fadeIn 3s; /* Teksti ilmestyy rauhallisesti */
         }
-        .elephant-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            margin: 20px 0;
-            border: 5px solid #fce4ec;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .description {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #555;
-            margin: 20px 0;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #ff5252;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn:hover {
-            transform: scale(1.05);
-            background-color: #ff1744;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8Z8Z9M6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <div class="container">
-        <h1>Hyvää päivää, sanoo:</h1>
-        
-        <img src="punainen_elefantti.png" alt="Punainen Elefantti" class="elephant-img">
-
-        <div class="description">
-            <p>Minä olen Punainen Elefantti. Olen täällä tekemässä näkyväksi sitä, mistä on vaikea puhua.</p>
-            <p>Lähdetään yhdessä ulkoilemaan ja tekemään vieraannutettujen vanhempien tuska näkyväksi.</p>
-        </div>
-
-        <a href="walking_spider.html" class="btn">Avaa Walking Spider</a>
-    </div>
+    <h1>Hyvää päivää sulle</h1>
 
     <script>
-        // Tähän voidaan myöhemmin lisätä se siirtolaskurin erityissääntö:
-        // Kuningas tyhjään sarakkeeseen = 0 pistettä/siirtoa, jos se on jo pinon ylin.
-        console.log("Analytics ja Punainen Elefantti ovat valmiina.");
+        // Taustalla pysyy tieto kävijämääristä, vaikka sivu onkin minimalistinen.
+        console.log("Hyvän päivän toivotus lähetetty.");
     </script>
 </body>
 </html>
