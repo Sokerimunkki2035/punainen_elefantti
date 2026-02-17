@@ -6,26 +6,36 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N8Z8Z9M6');</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyvää päivää</title>
     
     <style>
         body {
-            font-family: 'Georgia', serif; /* Hieman pehmeämpi ja arvokkaampi fontti */
+            font-family: 'Georgia', serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #ffffff; /* Puhdas valkoinen */
+            background-color: #ffffff;
             color: #333;
+            text-align: center;
         }
         h1 {
             font-size: 3em;
             font-weight: normal;
             letter-spacing: 2px;
-            animation: fadeIn 3s; /* Teksti ilmestyy rauhallisesti */
+            margin-bottom: 20px;
+            animation: fadeIn 3s;
+        }
+        img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            animation: fadeIn 4s;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -36,12 +46,13 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8Z8Z9M6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <h1>Hyvää päivää sulle</h1>
+    
+    <img src="punainen_elefantti.png" alt="Punainen Elefantti">
 
     <script>
-        // Taustalla pysyy tieto kävijämääristä, vaikka sivu onkin minimalistinen.
-        console.log("Hyvän päivän toivotus lähetetty.");
+        console.log("Sivu ladattu: Hyvän päivän toivotus ja elefantti.");
     </script>
 </body>
-</html>
- 
+</htm l>
